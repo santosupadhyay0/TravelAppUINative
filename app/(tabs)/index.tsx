@@ -81,15 +81,6 @@ export default function Home() {
 
 
       </View>
-
-
-
-
-
-
-
-
-
     </>
   )
 
@@ -111,21 +102,22 @@ const styles = StyleSheet.create({
     flex:1,
     flexDirection:'row',
     backgroundColor: Colors.white,
-    paddingHorizontal:16,
+    paddingHorizontal: 16,
     paddingVertical: 12,
     borderRadius:10,
-    alignItems:'center'
+    alignItems:'center',
+    gap:15
   },
   searchSection:{
     flexDirection: 'row',
     alignItems:'center',
     marginVertical: 10,
-    gap:5
+    gap:15,
   },
   filterBtn:{
     backgroundColor: Colors.primaryColor,
     paddingVertical: 13,
-    paddingHorizontal: 10,
+    paddingHorizontal: 14,
     borderRadius: 12,
 
   }
