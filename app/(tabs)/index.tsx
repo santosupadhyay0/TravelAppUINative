@@ -6,6 +6,8 @@ import { Ionicons } from '@expo/vector-icons'
 import Colors from '../constants/Colors'
 import { useHeaderHeight } from '@react-navigation/elements'
 import { View, Text } from 'react-native'
+import { TextInput } from 'react-native'
+import CategoryButtons from '../components/CategoryButtons'
 
 export default function Home() {
 
@@ -56,9 +58,34 @@ export default function Home() {
       />
 
 
-      <View style={[styles.container, {paddingTop: headerHeight}]} >
-        <Text>Explore The Beautiful World !</Text>
+      <View style={[styles.container, { paddingTop: headerHeight }]} >
+        <Text style={styles.headingText}>Explore The Beautiful World !</Text>
+
+
+
+        <View style={styles.searchSection}> 
+
+          <View style={styles.searchBar} >
+            <Ionicons name='search' size={20} />
+            <TextInput placeholder='Search' />
+          </View>
+
+          <TouchableOpacity onPress={() => {}}  style={styles.filterBtn} >
+            <Ionicons name='options' size={24} />
+          </TouchableOpacity>
+        </View>
+
+
+      <CategoryButtons />
+
+
+
       </View>
+
+
+
+
+
 
 
 
@@ -69,8 +96,38 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
+    flex: 1,
+    paddingHorizontal: 20,
+    backgroundColor: Colors.bgColor
+  },
+  headingText: {
+    fontSize: 25,
+    fontWeight: '700',
+    color: Colors.black,
+    marginTop: 16
+  },
+  searchBar:{
     flex:1,
+    flexDirection:'row',
+    backgroundColor: Colors.white,
+    paddingHorizontal:16,
+    paddingVertical: 12,
+    borderRadius:10,
+    alignItems:'center'
+  },
+  searchSection:{
+    flexDirection: 'row',
+    alignItems:'center',
+    marginVertical: 10,
+    gap:5
+  },
+  filterBtn:{
+    backgroundColor: Colors.primaryColor,
+    paddingVertical: 13,
+    paddingHorizontal: 10,
+    borderRadius: 12,
+
   }
 }
 )
