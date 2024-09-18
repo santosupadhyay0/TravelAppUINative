@@ -60,7 +60,16 @@ const styles = StyleSheet.create({
         shadowRadius: 4
     },
     activeIndexBtn:{
+        flexDirection: 'row',
+        alignItems: 'center',
         backgroundColor: Colors.primaryColor,
-        color: 'white',
+        paddingHorizontal: 16,
+        paddingVertical: 10,
+        borderRadius: 10,
+        margin: 2,
+        shadowColor: 'black',
+        shadowOffset: { width: 1, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 4
     }
 })
